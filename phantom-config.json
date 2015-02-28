@@ -1,0 +1,7 @@
+{
+  "ignoreSslErrors": true,
+
+  "webSecurityEnabled": false,
+
+  "sslProtocol": "any"
+}
