@@ -8,6 +8,8 @@ page.settings.userAgent = 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.3
 # Viewport.
 page.viewportSize = { width: 1024, height: 768 };
 
+page.settings.userName = 'garciau'
+page.settings.password = 'Qe,x+w]n=s#6'
 
 # Base testing class.
 class PhantomTest
@@ -52,7 +54,7 @@ class PhantomTest
         @setOptions opts
 
         # Handler for errors.
-        page.onError = (msg, trace) => @writeLog msg# Just don't log for now.
+        page.onError = (msg, trace) => #@writeLog msg# Just don't log for now.
 
         # Handler for messages coming from PhantomJS/Jasmine output.
         page.onConsoleMessage = (msg) => 

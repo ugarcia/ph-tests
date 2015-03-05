@@ -62,7 +62,7 @@ if [[ $(type -P "phantomjs") ]] ; then
 
           if [ -f $SCRIPT ] ; then
              for i in $(eval echo "{1..$PROCESSES}"); do
-                $COMMAND --config=$BASEDIR/phantom-config.json $SCRIPT $OPTIONS > $OUT &
+                $COMMAND --config=$BASEDIR/phantom-config.json $SCRIPT $OPTIONS >> $OUT &
              done
           else
              echo "Script $SCRIPT not found"

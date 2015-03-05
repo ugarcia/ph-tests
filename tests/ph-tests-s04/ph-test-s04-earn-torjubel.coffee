@@ -10,10 +10,10 @@ argsString = args.join " "
 # Match environment property from args string.
 env = (/-{0,2}env[= ](\w+)/).exec(argsString)?[1] || 'dev'
 
-# Match amount of goals property from args string.
+# Match username property from args string.
 user = (/-{0,2}user[= ]([-_.A-Za-z0-9]{6,30})/).exec(argsString)?[1] || 'TEST_ING_LOAD500'
 
-# Match interval to wait before each goal property from args string.
+# Match password property from args string.
 password = (/-{0,2}password[= ]([^ ]+)/).exec(argsString)?[1] || 'Hamburg01#'
 
 # Match amount of goals property from args string.

@@ -14,6 +14,10 @@
     height: 768
   };
 
+  page.settings.userName = 'garciau';
+
+  page.settings.password = 'Qe,x+w]n=s#6';
+
   PhantomTest = (function() {
     PhantomTest.prototype.url = null;
 
@@ -57,9 +61,7 @@
     PhantomTest.prototype.init = function(opts) {
       this.setOptions(opts);
       page.onError = (function(_this) {
-        return function(msg, trace) {
-          return _this.writeLog(msg);
-        };
+        return function(msg, trace) {};
       })(this);
       return page.onConsoleMessage = (function(_this) {
         return function(msg) {
