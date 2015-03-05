@@ -60,8 +60,8 @@ while getopts p:o:u:P:e:a:w:c:v:h: option ; do
    esac
 done
 
-GOALS_INTERVAL=$(($WAITING/2))
-GOALS_AMOUNT=$(($AMOUNT*2))
+GOALS_INTERVAL=$(($WAITING/10))
+GOALS_AMOUNT=$(($AMOUNT*10))
 
 $BASEDIR/../../ph-test-daemon.sh start -s $GOALS_SCRIPT -v $PHANTOM_VERSION -i "amount=$GOALS_AMOUNT interval=$GOALS_INTERVAL"
 

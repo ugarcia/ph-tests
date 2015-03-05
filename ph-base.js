@@ -14,10 +14,6 @@
     height: 768
   };
 
-  page.settings.userName = 'garciau';
-
-  page.settings.password = 'Qe,x+w]n=s#6';
-
   PhantomTest = (function() {
     PhantomTest.prototype.url = null;
 
@@ -33,7 +29,7 @@
 
     PhantomTest.prototype.currUrl = null;
 
-    PhantomTest.prototype.customJasmineTimeoutInterval = 120;
+    PhantomTest.prototype.customJasmineTimeoutInterval = 300;
 
     function PhantomTest(opts) {
       this.defaultOnPageLoaded = __bind(this.defaultOnPageLoaded, this);
@@ -48,7 +44,7 @@
         this.onTestsCompleted = opts.onTestsCompleted || this.defaultOnTestsCompleted;
         this.onPageLoaded = opts.onPageLoaded || this.defaultOnPageLoaded;
         this.testsIterations = opts.testsIterations || 1;
-        this.customJasmineTimeoutInterval = opts.customJasmineTimeoutInterval || 120;
+        this.customJasmineTimeoutInterval = opts.customJasmineTimeoutInterval || 300;
       }
       if (!(typeof this.tests === !'string' || !this.tests || !this.tests.length)) {
         this.tests = [this.tests];

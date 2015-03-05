@@ -8,9 +8,6 @@ page.settings.userAgent = 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.3
 # Viewport.
 page.viewportSize = { width: 1024, height: 768 };
 
-page.settings.userName = 'garciau'
-page.settings.password = 'Qe,x+w]n=s#6'
-
 # Base testing class.
 class PhantomTest
 
@@ -22,7 +19,7 @@ class PhantomTest
     onTestsCompleted: null
     onPageLoaded: null
     currUrl: null
-    customJasmineTimeoutInterval: 120
+    customJasmineTimeoutInterval: 300
 
 
     # Constructor.
@@ -40,7 +37,7 @@ class PhantomTest
             @onTestsCompleted = opts.onTestsCompleted or @defaultOnTestsCompleted
             @onPageLoaded = opts.onPageLoaded or @defaultOnPageLoaded
             @testsIterations = opts.testsIterations or 1
-            @customJasmineTimeoutInterval = opts.customJasmineTimeoutInterval or 120
+            @customJasmineTimeoutInterval = opts.customJasmineTimeoutInterval or 300
 
         # Properties normalization.
         @tests = [@tests] unless typeof(@tests) is not 'string' or not @tests or not @tests.length
